@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Mahasiswa</title>
+
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background: #f4f8ff;
+            color: #222;
+            margin: 30px;
+        }
+
+        h1, h2 {
+            color: #1a56b0;
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            border: 1px solid #ccd;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+
+        .baris {
+            margin-bottom: 12px;
+        }
+
+        .baris label {
+            display: inline-block;
+            width: 120px;
+            vertical-align: top;
+        }
+
+        input[type="text"], input[type="email"], select, textarea {
+            padding: 5px;
+            border: 1px solid #999;
+            width: 260px;
+        }
+
+        button {
+            background: #1a56b0;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+        }
+
+        th {
+            background: #1a56b0;
+            color: white;
+            padding: 8px;
+        }
+
+        td {
+            border: 1px solid #ccd;
+            padding: 8px;
+        }
+
+        .total {
+            background: #e6eefb;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Data Mahasiswa</h1>
+
+    <form action="proses.php" method="post">
+
+        <div class="baris">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
+        </div>
+
+        <div class="baris">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="baris">
+            <label>Jenis Kelamin</label>
+            <input type="radio" name="jk" value="L"> Laki-laki
+            <input type="radio" name="jk" value="P"> Perempuan
+        </div>
+
+        <div class="baris">
+            <label>Hobi</label>
+            <input type="checkbox" name="hobi" value="baca"> Membaca
+            <input type="checkbox" name="hobi" value="musik"> Musik
+            <input type="checkbox" name="hobi" value="olahraga"> Olahraga
+        </div>
+
+        <div class="baris">
+            <label for="prodi">Prodi</label>
+            <select id="prodi" name="prodi">
+                <option>Teknologi Informasi</option>
+                <option>Informatika</option>
+                <option>Sistem Informasi</option>
+            </select>
+        </div>
+
+        <div class="baris">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2>Daftar Mahasiswa</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Prodi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2401001</td>
+                <td>Andi Prasetyo</td>
+                <td>Teknologi Informasi</td>
+                <td>3.75</td>
+            </tr>
+            <tr>
+                <td>2401002</td>
+                <td>Bunga Lestari</td>
+                <td>Teknologi Informasi</td>
+                <td>3.42</td>
+            </tr>
+            <tr>
+                <td>2401003</td>
+                <td>Candra Wijaya</td>
+                <td>Informatika</td>
+                <td>3.60</td>
+            </tr>
+            <tr>
+                <td>2401004</td>
+                <td>Dewi Anggraeni</td>
+                <td>Sistem Informasi</td>
+                <td>3.18</td>
+            </tr>
+            <tr>
+                <td>2401005</td>
+                <td>Eko Saputra</td>
+                <td>Informatika</td>
+                <td>3.55</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="total">
+                <td colspan="3">Rata-rata IPK</td>
+                <td>3.50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
